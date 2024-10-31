@@ -1,0 +1,200 @@
+{
+    "banner":[
+        {
+            "image":"/assets/img/banner-1.jpg",
+            "imageAlt":"image 1"
+        },
+        {
+            "image":"/assets/img/banner-1.jpg",
+            "imageAlt":"image 2"
+        },
+        {
+            "image":"/assets/img/banner-1.jpg",
+            "imageAlt":"image 3"
+        }
+    ],
+    "topSelling":[
+        {
+            "title": "Designing Across Senses",
+            "subtitle": "A Multimodal Approach to Product Design",
+            "isbn13": "9781491954249",
+            "price": "$27.59",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 1",
+            "url": "9781491954249"
+        },
+        {
+            "title": "Web Scraping with Python, 2nd Edition",
+            "subtitle": "Collecting More Data from the Modern Web",
+            "isbn13": "9781491985571",
+            "price": "$33.99",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 2",
+            "url": "9781491985571"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        },
+        {
+            "title": "Programming iOS 11",
+            "subtitle": "Dive Deep into Views, View Controllers, and Frameworks",
+            "isbn13": "9781491999226",
+            "price": "$59.17",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"hidden",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"",
+            "url": "9781491999226"
+        }
+    ],
+    "videoTutorial":[
+        {
+            "title": "Designing Across Senses",
+            "subtitle": "A Multimodal Approach to Product Design",
+            "isbn13": "9781491954249",
+            "price": "$27.59",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 1",
+            "url": "9781491954249"
+        },
+        {
+            "title": "Designing Across Senses",
+            "subtitle": "A Multimodal Approach to Product Design",
+            "isbn13": "9781491954249",
+            "price": "$27.59",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 1",
+            "url": "9781491954249"
+        },
+        {
+            "title": "Designing Across Senses",
+            "subtitle": "A Multimodal Approach to Product Design",
+            "isbn13": "9781491954249",
+            "price": "$27.59",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 1",
+            "url": "9781491954249"
+        },
+        {
+            "title": "Designing Across Senses",
+            "subtitle": "A Multimodal Approach to Product Design",
+            "isbn13": "9781491954249",
+            "price": "$27.59",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 1",
+            "url": "9781491954249"
+        },
+        {
+            "title": "Designing Across Senses",
+            "subtitle": "A Multimodal Approach to Product Design",
+            "isbn13": "9781491954249",
+            "price": "$27.59",
+            "discountPrice":"$29.50",
+            "discountPercent":"15%<br/>Off",
+            "discountStatus":"block",
+            "image": "/assets/img/productsImg.jpg",
+            "imageAlt":"image 1",
+            "url": "9781491954249"
+        }
+    ]
+}
