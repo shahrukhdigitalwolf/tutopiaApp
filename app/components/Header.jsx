@@ -151,21 +151,21 @@ function Header() {
             <div>
               <NotificationDropdown/>
             </div>
-            <Link href="/" className="text-sm/6 font-semibold text-gray-900">
-            <Tooltip title="Add to cart">
-                <IconButton
-                sx={{ color:'black' }}
-                >
-                <Badge badgeContent={1} color="primary">
-                    <AddShoppingCartIcon/>
-                </Badge>
-                </IconButton>
-            </Tooltip>
+            <Link href="/add-to-cart" className="text-sm/6 font-semibold text-gray-900">
+              <Tooltip title="Add to cart">
+                  <IconButton
+                  sx={{ color:'black' }}
+                  >
+                  <Badge badgeContent={1} color="primary">
+                      <AddShoppingCartIcon/>
+                  </Badge>
+                  </IconButton>
+              </Tooltip>
             </Link>
-            <Link href="/" className="text-sm/6 font-semibold text-gray-900 flex items-center gap-x-1 ms-3">
+           {/*  <Link href="/" className="text-sm/6 font-semibold text-gray-900 flex items-center gap-x-1 ms-3">
              <LoginOutlinedIcon fontSize='small' /> Log in 
-            </Link>
-            {/* <ProfileDropdown/> */}
+            </Link> */}
+            <ProfileDropdown/>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

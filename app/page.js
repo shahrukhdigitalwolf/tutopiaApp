@@ -81,7 +81,6 @@ export default function Home() {
                 product?.topSelling?.map((ele,i)=>{
                   return(
                     <SplideSlide key={i}>
-                      <Link href={ele.url}>
                         <ProductCard 
                           image={ele.image} 
                           imageAlt={ele.imageAlt} 
@@ -89,9 +88,9 @@ export default function Home() {
                           price={ele.price} 
                           discountPrice={ele.discountPrice} 
                           discountPercent={ele.discountPercent} 
-                          discountStatus={ele.discountStatus} 
+                          discountStatus={ele.discountStatus}
+                          productUrl={ele.url} 
                         />
-                      </Link>
                     </SplideSlide>
                   )
                 })
@@ -135,7 +134,6 @@ export default function Home() {
                 product?.videoTutorial?.map((ele,i)=>{
                   return(
                     <SplideSlide key={i}>
-                      <Link href={ele.url}>
                         <ProductCard 
                           image={ele.image} 
                           imageAlt={ele.imageAlt} 
@@ -144,8 +142,8 @@ export default function Home() {
                           discountPrice={ele.discountPrice} 
                           discountPercent={ele.discountPercent} 
                           discountStatus={ele.discountStatus} 
+                          productUrl={ele.url}
                         />
-                      </Link>
                     </SplideSlide>
                   )
                 })
