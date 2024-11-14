@@ -2,7 +2,6 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Image from 'next/image';
 import ProductCard from './components/ProductCard';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import ProductSectionHeading from './components/ProductSectionHeading';
 import { handleBokenImg } from './lib/utils';
