@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { handleBokenImg } from '../lib/utils'
 
 function ProductCard(props) {
   return (
@@ -8,7 +9,7 @@ function ProductCard(props) {
             <div className={`bg-[#FFCC00] text-[11px] text-center leading-[13px] w-[2.5rem] h-[2.5rem] flex justify-center flex-col rounded-full font-bold absolute right-0 top-0 ${props.discountStatus}`}
                 dangerouslySetInnerHTML={{ __html: props.discountPercent }}
             />
-            <Image className='mx-auto' src={props.image} alt={props.imageAlt || 'Tutopia Books'} width={200} height={300} />
+            <Image className='mx-auto' src={props.image} onError={handleBokenImg} alt={props.imageAlt || 'Tutopia Books'} width={200} height={300} />
         </div>
         <div>
             <p className='text-[#525252] text-[16px] text-center line-clamp-1'>{props.title}</p>

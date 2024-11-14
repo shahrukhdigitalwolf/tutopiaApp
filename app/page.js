@@ -5,6 +5,7 @@ import ProductCard from './components/ProductCard';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import ProductSectionHeading from './components/ProductSectionHeading';
+import { handleBokenImg } from './lib/utils';
 
 export default function Home() {
 
@@ -38,7 +39,7 @@ export default function Home() {
               product?.banner?.map((ele,i)=>{
                 return(
                   <SplideSlide key={i}>
-                    <Image src={ele.image} alt={ele.imageAlt || "tutopia banner image"} width={1860} height={682}/>
+                    <Image src={ele.image} onError={handleBokenImg} alt={ele.imageAlt || "tutopia banner image"} width={1860} height={682}/>
                   </SplideSlide>
                 )
               })
