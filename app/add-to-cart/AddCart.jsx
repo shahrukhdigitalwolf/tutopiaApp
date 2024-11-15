@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 import ClearIcon from '@mui/icons-material/Clear';
 import CheckIcon from '@mui/icons-material/Check';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 function AddCart() {
     const [qty, setQty] = useState(1);
@@ -14,11 +15,11 @@ function AddCart() {
     };
   return (
     <div className='max-w-7xl mx-auto px-4 py-6'>
-        <div className='pb-8'>
+        <div className='pb-8 border-b border-slate-200'>
             <h1 className='lg:text-[30px] text-[25px] font-semibold'>Shopping Cart</h1>
         </div>
         <div>
-            <div className='flex gap-x-2 border-b border-t border-slate-200 py-6'>
+            <div className='flex gap-x-2 border-b border-slate-200 py-6'>
                 <div className='w-[15%]'>
                     <Image src="/assets/img/shopping-cart.jpg" alt='' width={200} height={200} />
                 </div> 
@@ -59,6 +60,30 @@ function AddCart() {
                     <p className='text-[18px] text-end font-semibold'>$35.00</p>
                 </div>
             </div>
+            <div className='bg-[#f6f6f6] py-3 px-5 rounded-lg mt-6'>
+                <div className='flex items-center justify-between border-b border-slate-300 py-3 px-1'>
+                    <span className='text-[#4b5563]'>Subtotal</span>
+                    <span className='text-[#4b5563] font-semibold'>$99.00</span>
+                </div>
+                <div className='flex items-center justify-between border-b border-slate-300 py-3 px-1'>
+                    <span className='text-[#4b5563]'>Shipping</span>
+                    <span className='text-[#4b5563] font-semibold'>$5.00</span>
+                </div>
+                <div className='flex items-center justify-between border-b border-slate-300 py-3 px-1'>
+                    <span className='text-[#4b5563]'>Tax</span>
+                    <span className='text-[#4b5563] font-semibold'>$8.32</span>
+                </div>
+                <div className='flex items-center justify-between py-3 px-1'>
+                    <span className='text-[20px] font-semibold'>Order total</span>
+                    <span className='text-[20px] font-semibold'>$112.32</span>
+                </div>
+            </div>
+            <div className='px-1 my-3 flex justify-between items-center'>
+                <Button href="/" endIcon={<ArrowRightAltIcon />}>Continue Shopping </Button>
+                <Button variant="text" endIcon={<ArrowRightAltIcon />}>
+                    Checkout
+                </Button>
+            </div> 
         </div>
         
     </div>

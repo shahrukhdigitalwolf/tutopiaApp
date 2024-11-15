@@ -5,3 +5,5 @@ const handleBokenImg = (e) =>{
 export{
    handleBokenImg,
 } 
+
+export const externalImageLoader = ({ src }) => src;

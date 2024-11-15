@@ -9,11 +9,28 @@ import { handleBokenImg } from './lib/utils';
 export default function Home() {
 
   const[product, setProduct] = useState([]);
+  const username = "TNCTutopiaEcommApiUser";
+  const password = "TNCTutopiaecomApi@32145@";
 
   useEffect(()=>{
     const homeProductApi = async () =>{
-      const res = await fetch(`/assets/data/homeData.json`)
+      const res = await fetch(`https://dwecommapi.tutopiacrm.in/api/v1/get_all_products`,{
+        method: "POST",
+        headers: {
+          'Authorization': 'Basic ' + btoa(username + ":" + password),
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          product_id: null,
+          category_id: null,
+          product_name: null,
+          max_price: null,
+          min_price: null,
+          search_text: null,
+        }),
+      })
       const data = await res.json();
+      console.log(data,'data')
       setProduct(data)
     }
     homeProductApi();
@@ -64,7 +81,7 @@ export default function Home() {
                 },
                 breakpoints: {
                   640: {
-                    perPage: 2,
+                    perPage: 1,
                   },
                   992:{
                     perPage:4,
@@ -78,18 +95,18 @@ export default function Home() {
               aria-label="banner slider"
             >
               {
-                product?.topSelling?.map((ele,i)=>{
+                product?.data?.map((ele,i)=>{
                   return(
                     <SplideSlide key={i}>
                         <ProductCard 
-                          image={ele.image} 
+                          image={`https://dev.tutopiacrm.in/${ele.product_imagethumb_url}`} 
                           imageAlt={ele.imageAlt} 
-                          title={ele.title} 
-                          price={ele.price} 
-                          discountPrice={ele.discountPrice} 
-                          discountPercent={ele.discountPercent} 
+                          title={ele.product_name} 
+                          price={ele.Product_MRP} 
+                          discountPrice={ele.Product_Discount} 
+                          discountPercent={ele.Product_Discount/ele.Product_MRP*100} 
                           discountStatus={ele.discountStatus}
-                          productUrl={ele.url} 
+                          productUrl={ele.HSNCode} 
                         />
                     </SplideSlide>
                   )

@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { externalImageLoader } from '../lib/utils'
 /* import { handleBokenImg } from '../lib/utils' */
 
 function ProductCard(props) {
+    
   return (
     <div className='border border-[#b5b5b5] p-3 max-w-full w-[300px] mx-auto relative'>
         <div className='pb-3'>
@@ -11,7 +13,7 @@ function ProductCard(props) {
                 dangerouslySetInnerHTML={{ __html: props.discountPercent }}
             />
             <Link href={props.productUrl}>
-                <Image className='mx-auto' src={props.image} alt={props.imageAlt || 'Tutopia Books'} width={200} height={300} />
+                <Image className='mx-auto' loader={externalImageLoader} src={props.image} alt={props.imageAlt || 'Tutopia Books'} width={200} height={300} />
             </Link>
         </div>
         <div>
@@ -20,10 +22,10 @@ function ProductCard(props) {
             </Link>
             <div className='flex justify-center items-center gap-x-3'>
             <Link href={props.productUrl}>
-                <span className='text-[#056DB6] text-[15px]'>{props.price}</span>
+                <span className='text-[#056DB6] text-[15px]'>₹ {props.price}</span>
             </Link>
                 <Link href={props.productUrl}>
-                    <span className={`text-[#525252] text-[12px] line-through ${props.discountStatus}`}>{props.discountPrice}</span>
+                    <span className={`text-[#525252] text-[12px] line-through ${props.discountStatus}`}>₹ {props.discountPrice}</span>
                 </Link>
             </div>
         </div>
