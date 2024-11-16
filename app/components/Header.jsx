@@ -25,10 +25,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
-import { Badge, IconButton, Tooltip } from '@mui/material'
+import { Badge, Button, IconButton, Tooltip } from '@mui/material'
 import ProfileDropdown from './ProfileDropdown'
 import NotificationDropdown from './NotificationDropdown'
 import SearchBar from './SearchBar'
+import { openLoginModel } from '../authentication/authSlice'
+import { useDispatch } from 'react-redux'
+import Login from '../authentication/login'
 
 /* const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -44,6 +47,7 @@ const callsToAction = [
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const dispatch = useDispatch();
   return (
     <>
       <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-[#F7F7F7] px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
@@ -162,10 +166,11 @@ function Header() {
                   </IconButton>
               </Tooltip>
             </Link>
-           {/*  <Link href="/" className="text-sm/6 font-semibold text-gray-900 flex items-center gap-x-1 ms-3">
-             <LoginOutlinedIcon fontSize='small' /> Log in 
-            </Link> */}
-            <ProfileDropdown/>
+            <Button onClick={()=> dispatch(openLoginModel(true))} className="text-sm/6 font-semibold text-gray-900 flex items-center gap-x-1 ms-3">
+              <LoginOutlinedIcon fontSize='small' /> Log in 
+            </Button>
+            {/* <ProfileDropdown/> */}
+            <Login/>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

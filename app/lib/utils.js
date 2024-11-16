@@ -7,3 +7,5 @@ export{
 } 
 
 export const externalImageLoader = ({ src }) => src;
+
+export const baseUrl = 'https://dev.tutopiacrm.in/';

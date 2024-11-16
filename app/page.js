@@ -4,13 +4,19 @@ import Image from 'next/image';
 import ProductCard from './components/ProductCard';
 import { useEffect, useState } from 'react';
 import ProductSectionHeading from './components/ProductSectionHeading';
-import { handleBokenImg } from './lib/utils';
+import { baseUrl, handleBokenImg } from './lib/utils';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment } from './exampleSlice';
+import Link from 'next/link';
 
 export default function Home() {
 
   const[product, setProduct] = useState([]);
   const username = "TNCTutopiaEcommApiUser";
   const password = "TNCTutopiaecomApi@32145@";
+
+  const value = useSelector((state) => state.example.value)
+  const dispatch = useDispatch()
 
   useEffect(()=>{
     const homeProductApi = async () =>{
@@ -30,7 +36,6 @@ export default function Home() {
         }),
       })
       const data = await res.json();
-      console.log(data,'data')
       setProduct(data)
     }
     homeProductApi();
@@ -98,16 +103,17 @@ export default function Home() {
                 product?.data?.map((ele,i)=>{
                   return(
                     <SplideSlide key={i}>
+                      <Link href={`${ele.ProductRefid}`}>
                         <ProductCard 
-                          image={`https://dev.tutopiacrm.in/${ele.product_imagethumb_url}`} 
+                          image={`${baseUrl}${ele.product_imagethumb_url}`} 
                           imageAlt={ele.imageAlt} 
                           title={ele.product_name} 
                           price={ele.Product_MRP} 
                           discountPrice={ele.Product_Discount} 
                           discountPercent={ele.Product_Discount/ele.Product_MRP*100} 
                           discountStatus={ele.discountStatus}
-                          productUrl={ele.HSNCode} 
                         />
+                      </Link>
                     </SplideSlide>
                   )
                 })
@@ -168,6 +174,11 @@ export default function Home() {
             </Splide>
           </div>
         </div>
+      </section>
+      <section>
+        <h1>Counter: {value}</h1>
+        <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button>
       </section>
     </main>
   );
